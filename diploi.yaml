@@ -1,5 +1,6 @@
-diploiVersion: "v1.0"
+diploiVersion: v1.0
 components:
-  - name: Atomix Cockpit
-    identifier: atomix-cockpit
-    package: https://github.com/diploi/react-component#main
+  - name: React + Vite
+    identifier: react-vite
+    package: https://github.com/diploi/component-react-vite#v19.2.5
+    folder: .
