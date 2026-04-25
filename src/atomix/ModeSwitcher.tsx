@@ -36,7 +36,7 @@ export function ModeSwitcher({ active, onChange }: Props) {
         Active Mode
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
         {(Object.keys(MODE_META) as ModeKey[]).map((key) => {
           const meta = MODE_META[key];
           const Icon = ICONS[key];
@@ -46,7 +46,7 @@ export function ModeSwitcher({ active, onChange }: Props) {
               key={key}
               type="button"
               onClick={() => handle(key)}
-              className="group relative text-left p-6 rounded-md transition-all"
+              className="group relative text-left p-8 min-h-[140px] rounded-md transition-all w-full"
               style={{
                 backgroundColor: isActive
                   ? `color-mix(in oklab, ${meta.accent} 4%, #0F1020)`
@@ -72,7 +72,7 @@ export function ModeSwitcher({ active, onChange }: Props) {
               }}
             >
               <div className="flex items-start justify-between mb-4">
-                <Icon size={22} style={{ color: meta.accent }} />
+                <Icon className="w-8 h-8" style={{ color: meta.accent }} />
                 {isActive && (
                   <span
                     className="font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-sm"

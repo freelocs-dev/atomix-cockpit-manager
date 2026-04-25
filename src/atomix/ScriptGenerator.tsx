@@ -97,7 +97,7 @@ export function ScriptGenerator({ config }: { config: AtomixConfig }) {
           {copied ? <Check size={11} style={{ color: accent }} /> : <Copy size={11} />}
           {copied ? "copied" : "copy"}
         </button>
-        <div className="p-4 max-h-80 overflow-auto">
+        <div className="p-4 max-h-[400px] overflow-auto">
           <Highlight code={code} />
         </div>
       </div>
