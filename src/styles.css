@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -19,6 +20,17 @@
  */
 
 @theme inline {
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-atomix-bg: var(--atomix-bg);
+  --color-atomix-card: var(--atomix-card);
+  --color-atomix-surface: var(--atomix-surface);
+  --color-atomix-code: var(--atomix-code);
+  --color-atomix-border: var(--atomix-border);
+  --color-atomix-border-strong: var(--atomix-border-strong);
+  --color-gaming: var(--gaming);
+  --color-work: var(--work);
+  --color-creator: var(--creator);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,9 +74,18 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.375rem;
+  --atomix-bg: #080810;
+  --atomix-card: #0F1020;
+  --atomix-surface: #131628;
+  --atomix-code: #060608;
+  --atomix-border: rgba(255, 255, 255, 0.06);
+  --atomix-border-strong: rgba(255, 255, 255, 0.12);
+  --gaming: #DC2626;
+  --work: #0EA5E9;
+  --creator: #F59E0B;
+  --background: #080810;
+  --foreground: #E5E7EB;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -138,7 +159,20 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--atomix-bg);
+    color: #E5E7EB;
+    font-family: var(--font-sans);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+  }
+  .cursor-blink::after {
+    content: "▊";
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
   }
 }
