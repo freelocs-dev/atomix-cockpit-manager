@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #05080F; font-family: "Inter", sans-serif; padding: 24px; display: flex; gap: 32px; align-items: center; }
+.logo-set { display: flex; flex-direction: column; gap: 16px; }
+.logo-item { display: flex; align-items: center; gap: 14px; }
+.logo-bg { border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.size-label { font-size: 10px; color: #475569; font-family: monospace; }
+.divider-v { width: 1px; background: rgba(99,179,237,0.1); align-self: stretch; }
+.sizes { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+</style></head><body>
+  <div class="logo-set">
+    <!-- 64px -->
+    <div class="logo-item">
+      <div class="logo-bg" style="width:64px;height:64px;background:#0A0F1E;border:1px solid rgba(59,130,246,0.15)">
+        <img src="../assets/logo.svg" width="48" height="48" />
+      </div>
+      <div>
+        <div class="wordmark"><span style="color:#fff">Atomix</span><span style="color:#3B82F6">OS</span></div>
+        <div class="size-label">64px icon · wordmark</div>
+      </div>
+    </div>
+    <!-- 32px -->
+    <div class="logo-item">
+      <div class="logo-bg" style="width:36px;height:36px;background:#0A0F1E;border:1px solid rgba(59,130,246,0.12)">
+        <img src="../assets/logo.svg" width="26" height="26" />
+      </div>
+      <div style="font-size:16px;font-weight:700"><span style="color:#fff">Atomix</span><span style="color:#3B82F6">OS</span></div>
+    </div>
+    <!-- 16px — min size -->
+    <div class="logo-item">
+      <div class="logo-bg" style="width:20px;height:20px;background:#0A0F1E;border:1px solid rgba(59,130,246,0.12)">
+        <img src="../assets/logo.svg" width="16" height="16" />
+      </div>
+      <div class="size-label" style="color:#64748B">16px min size</div>
+    </div>
+  </div>
+  <div class="divider-v"></div>
+  <!-- Isolated icon sizes -->
+  <div class="sizes">
+    <div style="display:flex;align-items:center;gap:10px">
+      <img src="../assets/logo.svg" width="96" height="96" style="border-radius:20px;background:#0D1526" />
+      <img src="../assets/logo.svg" width="64" height="64" style="border-radius:14px;background:#0D1526" />
+      <img src="../assets/logo.svg" width="40" height="40" style="border-radius:9px;background:#0D1526" />
+      <img src="../assets/logo.svg" width="24" height="24" style="border-radius:5px;background:#0D1526" />
+      <img src="../assets/logo.svg" width="16" height="16" style="border-radius:3px;background:#0D1526" />
+    </div>
+    <div class="size-label">96 · 64 · 40 · 24 · 16px</div>
+  </div>
+</body></html>

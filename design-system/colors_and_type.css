@@ -1,0 +1,264 @@
+/*
+ * AtomixOS Design System — Colors & Typography
+ * Brand: OnLocsByte / AtomixOS
+ * Source: freelocs-dev/atomix-cockpit-manager src/styles.css + primitives.tsx
+ *
+ * Google Fonts substitution notice:
+ *   Inter      → loaded from Google Fonts (matches production)
+ *   JetBrains Mono → loaded from Google Fonts (matches production)
+ *   If you have local TTF files, drop them in fonts/ and update @font-face below.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+/* ─────────────────────────────────────────────
+   BASE COLOR TOKENS
+   ───────────────────────────────────────────── */
+:root {
+  /* Backgrounds / Surfaces */
+  --atomix-bg:         #05080F;   /* root background */
+  --atomix-surface:    #0A0F1E;   /* elevated surface / panels */
+  --atomix-card:       #0D1526;   /* cards */
+  --atomix-elevated:   #111D35;   /* app icon bubbles, row hovers */
+  --atomix-sidebar:    #08101F;   /* sidebar background */
+  --atomix-input:      #060D1A;   /* input / select backgrounds */
+  --atomix-code:       #04070D;   /* code / terminal blocks */
+
+  /* Borders */
+  --atomix-border:        rgba(99, 179, 237, 0.08);   /* default — very subtle */
+  --atomix-border-strong: rgba(59, 130, 246, 0.30);   /* active / focused */
+  --atomix-border-active: rgba(59, 130, 246, 0.40);   /* running/selected state */
+  --atomix-divider:       rgba(255, 255, 255, 0.05);  /* horizontal rules */
+
+  /* Accent — Electric Blue */
+  --atomix-accent:       #3B82F6;
+  --atomix-accent-hover: #2563EB;
+  --atomix-accent-soft:  #60A5FA;
+  --atomix-glow:         rgba(59, 130, 246, 0.15);
+
+  /* Text */
+  --atomix-text:         #F0F4FF;   /* primary — slightly blue-tinted white */
+  --atomix-text-secondary: #94A3B8; /* secondary body text */
+  --atomix-muted:        #64748B;   /* subtext, labels, placeholders */
+  --atomix-subtle:       #475569;   /* very muted — version labels */
+
+  /* Status / Mode Accents */
+  --atomix-gaming:   #DC2626;   /* Gaming mode — Red */
+  --atomix-work:     #0EA5E9;   /* Work mode — Sky blue */
+  --atomix-creator:  #F59E0B;   /* Creator mode — Amber */
+  --atomix-success:  #10B981;   /* Active/running — Emerald */
+  --atomix-danger:   #EF4444;   /* Destructive actions */
+
+  /* ─────────────────────────────────────────────
+     SHADOWS & GLOWS
+     ───────────────────────────────────────────── */
+  --shadow-card-hover:   0 0 20px rgba(59, 130, 246, 0.08);
+  --shadow-btn-hover:    0 0 18px rgba(59, 130, 246, 0.45);
+  --shadow-glow-pulse-a: 0 0 0px 0px rgba(59, 130, 246, 0.30);
+  --shadow-glow-pulse-b: 0 0 24px 2px rgba(59, 130, 246, 0.40);
+  --shadow-focus-ring:   0 0 0 3px rgba(59, 130, 246, 0.15);
+  --shadow-status-dot:   0 0 8px;   /* append color: 0 0 8px #3B82F6 */
+
+  /* ─────────────────────────────────────────────
+     BORDER RADIUS
+     ───────────────────────────────────────────── */
+  --radius-sm:   0.375rem;   /* 6px  — default shadcn base */
+  --radius-md:   0.5rem;     /* 8px  — buttons, inputs, tags */
+  --radius-lg:   0.75rem;    /* 12px — cards, panels, drawers */
+  --radius-xl:   1rem;       /* 16px — empty state frames */
+  --radius-full: 9999px;     /* pills, dots, toggles */
+
+  /* ─────────────────────────────────────────────
+     SPACING SCALE (matches Tailwind defaults used in codebase)
+     ───────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* ─────────────────────────────────────────────
+     TYPOGRAPHY FOUNDATIONS
+     ───────────────────────────────────────────── */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ─────────────────────────────────────────────
+   SEMANTIC TYPE TOKENS
+   ───────────────────────────────────────────── */
+
+/* Page / View heading */
+.atomix-h1 {
+  font-family: var(--font-sans);
+  font-size: 1.875rem;   /* 30px */
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+/* Section heading */
+.atomix-h2 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;    /* 20px */
+  font-weight: 600;
+  color: var(--atomix-text);
+  line-height: 1.3;
+}
+
+/* Card title */
+.atomix-h3 {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;   /* 18px */
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* Primary body */
+.atomix-body {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;   /* 14px */
+  font-weight: 400;
+  color: var(--atomix-text-secondary);
+  line-height: 1.5;
+}
+
+/* Small / meta */
+.atomix-small {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;    /* 12px */
+  font-weight: 400;
+  color: var(--atomix-muted);
+  line-height: 1.4;
+}
+
+/* Section label — uppercase overline */
+.atomix-label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;  /* 11px */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--atomix-muted);
+}
+
+/* Version / micro label */
+.atomix-micro {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;   /* 10px */
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--atomix-subtle);
+}
+
+/* Code / terminal */
+.atomix-code {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;  /* 13px */
+  font-weight: 400;
+  color: var(--atomix-text);
+  line-height: 1.6;
+  background: var(--atomix-code);
+  border: 1px solid var(--atomix-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+}
+
+/* ─────────────────────────────────────────────
+   UTILITY CLASSES
+   ───────────────────────────────────────────── */
+
+.atomix-card {
+  background: var(--atomix-card);
+  border: 1px solid var(--atomix-border);
+  border-radius: var(--radius-lg);
+}
+
+.atomix-card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.atomix-input {
+  background: var(--atomix-input);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--atomix-text);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.atomix-input:focus {
+  outline: none;
+  border-color: var(--atomix-accent);
+  box-shadow: var(--shadow-focus-ring);
+}
+
+.atomix-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--atomix-accent);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.2s;
+}
+
+.atomix-btn-primary:hover {
+  background: var(--atomix-accent-hover);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+.atomix-btn-primary:active {
+  transform: scale(0.97);
+}
+
+.atomix-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--atomix-text);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--atomix-border-strong);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.atomix-btn-ghost:hover {
+  background: var(--atomix-glow);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.15);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.40); }
+
+/* Glow pulse animation */
+@keyframes atomix-glow-pulse {
+  0%, 100% { box-shadow: var(--shadow-glow-pulse-a); }
+  50%       { box-shadow: var(--shadow-glow-pulse-b); }
+}
+.atomix-glow-pulse {
+  animation: atomix-glow-pulse 2.4s ease-in-out infinite;
+}

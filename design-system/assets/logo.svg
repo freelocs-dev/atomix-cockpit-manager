@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="512" height="512">
+  <defs>
+    
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0A1628"></stop>
+      <stop offset="100%" stop-color="#05080F"></stop>
+    </radialGradient>
+
+    
+    <linearGradient id="aGrad" x1="28" y1="8" x2="28" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"></stop>
+      <stop offset="100%" stop-color="#1D4ED8"></stop>
+    </linearGradient>
+
+    
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    
+    <filter id="outerGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"></feGaussianBlur>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.231&#xA;                0 0 0 0 0.510&#xA;                0 0 0 0 0.965&#xA;                0 0 0 0.5 0" result="coloredBlur"></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  
+  <rect width="56" height="56" rx="12" fill="url(#bgGlow)"></rect>
+
+  
+  <rect width="56" height="56" rx="12" fill="none" stroke="rgba(59,130,246,0.18)" stroke-width="1"></rect>
+
+  
+  
+  
+  
+
+  
+  <g filter="url(#outerGlow)">
+    <path d="M28 9&#xA;         L44.5 47&#xA;         H38.5&#xA;         L35.2 38.5&#xA;         H20.8&#xA;         L17.5 47&#xA;         H11.5&#xA;         Z" fill="url(#aGrad)" filter="url(#glow)"></path>
+    
+    
+    <rect x="22.5" y="31" width="11" height="3.5" rx="1.75" fill="url(#bgGlow)"></rect>
+  </g>
+
+  
+
+  
+  <circle cx="28" cy="9" r="2.8" fill="#3B82F6" filter="url(#glow)"></circle>
+  <circle cx="28" cy="9" r="1.4" fill="#93C5FD"></circle>
+
+  
+  <circle cx="11.5" cy="47" r="2.8" fill="#3B82F6" filter="url(#glow)"></circle>
+  <circle cx="11.5" cy="47" r="1.4" fill="#93C5FD"></circle>
+
+  
+  <circle cx="44.5" cy="47" r="2.8" fill="#3B82F6" filter="url(#glow)"></circle>
+  <circle cx="44.5" cy="47" r="1.4" fill="#93C5FD"></circle>
+
+  
+  <line x1="28" y1="9" x2="11.5" y2="47" stroke="rgba(59,130,246,0.18)" stroke-width="0.75" stroke-dasharray="2,3"></line>
+  <line x1="28" y1="9" x2="44.5" y2="47" stroke="rgba(59,130,246,0.18)" stroke-width="0.75" stroke-dasharray="2,3"></line>
+  <line x1="11.5" y1="47" x2="44.5" y2="47" stroke="rgba(59,130,246,0.18)" stroke-width="0.75" stroke-dasharray="2,3"></line>
+</svg>

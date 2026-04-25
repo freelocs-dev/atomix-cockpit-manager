@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #05080F; font-family: "Inter", sans-serif; padding: 16px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.col { display: flex; flex-direction: column; gap: 10px; }
+.field-label { font-size: 10px; font-weight: 500; color: #94A3B8; margin-bottom: 4px; }
+input, textarea, select {
+  width: 100%; background: #060D1A; border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 8px; padding: 8px 12px; font-size: 14px; color: #F0F4FF;
+  font-family: "Inter", sans-serif; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+}
+input::placeholder, textarea::placeholder { color: #64748B; }
+input:focus, textarea:focus, select:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+textarea { resize: none; }
+select { appearance: none; cursor: pointer; }
+.toggle-row { display: flex; align-items: center; gap: 10px; }
+.toggle { position: relative; display: inline-flex; width: 36px; height: 20px; border-radius: 9999px; background: #3B82F6; cursor: pointer; flex-shrink: 0; transition: background 0.2s; }
+.toggle-off { background: #1E2D45; }
+.thumb { position: absolute; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.4); transition: left 0.15s; }
+.toggle .thumb { left: 18px; }
+.toggle-off .thumb { left: 2px; }
+.toggle-label { font-size: 14px; color: #F0F4FF; }
+</style></head><body>
+<div class="grid">
+  <div class="col">
+    <div>
+      <div class="field-label">Name</div>
+      <input type="text" value="Gaming Night" />
+    </div>
+    <div>
+      <div class="field-label">Description</div>
+      <textarea rows="2" placeholder="What is this scenario for?"></textarea>
+    </div>
+    <div>
+      <div class="field-label">Mode</div>
+      <select><option>KDE Breeze Dark</option><option>Atomix Blue</option></select>
+    </div>
+  </div>
+  <div class="col">
+    <div>
+      <div class="field-label">Focused input</div>
+      <input type="text" placeholder="Type something..." style="border-color:#3B82F6; box-shadow: 0 0 0 3px rgba(59,130,246,0.15);" />
+    </div>
+    <div style="padding:12px; background:#0D1526; border-radius:10px; border: 1px solid rgba(99,179,237,0.08); display:flex; flex-direction:column; gap:10px;">
+      <div class="toggle-row">
+        <div class="toggle"><div class="thumb"></div></div>
+        <span class="toggle-label">Auto-start enabled</span>
+      </div>
+      <div class="toggle-row">
+        <div class="toggle toggle-off"><div class="thumb"></div></div>
+        <span class="toggle-label" style="color:#64748B">Apply wallpaper</span>
+      </div>
+      <div class="toggle-row">
+        <div class="toggle"><div class="thumb"></div></div>
+        <span class="toggle-label">Restore apps on switch</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

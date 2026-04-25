@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #05080F; font-family: "Inter", sans-serif; padding: 16px; }
+.grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.chip { border-radius: 10px; padding: 14px 12px; border: 1px solid; }
+.mode-name { font-size: 12px; font-weight: 600; }
+.hex { font-size: 10px; margin-top: 4px; opacity: 0.7; font-family: monospace; }
+.desc { font-size: 10px; margin-top: 3px; opacity: 0.55; }
+</style></head><body>
+<div class="grid">
+  <div class="chip" style="background:rgba(220,38,38,0.12); border-color:rgba(220,38,38,0.3)">
+    <div class="mode-name" style="color:#F87171">⚡ Gaming</div>
+    <div class="hex" style="color:#F87171">#DC2626</div>
+    <div class="desc" style="color:#F87171">Performance</div>
+  </div>
+  <div class="chip" style="background:rgba(14,165,233,0.12); border-color:rgba(14,165,233,0.3)">
+    <div class="mode-name" style="color:#38BDF8">💼 Work</div>
+    <div class="hex" style="color:#38BDF8">#0EA5E9</div>
+    <div class="desc" style="color:#38BDF8">Focus & flow</div>
+  </div>
+  <div class="chip" style="background:rgba(245,158,11,0.12); border-color:rgba(245,158,11,0.3)">
+    <div class="mode-name" style="color:#FCD34D">🎨 Creator</div>
+    <div class="hex" style="color:#FCD34D">#F59E0B</div>
+    <div class="desc" style="color:#FCD34D">Creative work</div>
+  </div>
+  <div class="chip" style="background:rgba(16,185,129,0.12); border-color:rgba(16,185,129,0.3)">
+    <div class="mode-name" style="color:#34D399">Running</div>
+    <div class="hex" style="color:#34D399">#10B981</div>
+    <div class="desc" style="color:#34D399">Active state</div>
+  </div>
+  <div class="chip" style="background:rgba(239,68,68,0.1); border-color:rgba(239,68,68,0.25)">
+    <div class="mode-name" style="color:#FCA5A5">Danger</div>
+    <div class="hex" style="color:#FCA5A5">#EF4444</div>
+    <div class="desc" style="color:#FCA5A5">Destructive</div>
+  </div>
+</div>
+</body></html>

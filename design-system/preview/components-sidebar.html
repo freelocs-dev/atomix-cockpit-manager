@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #05080F; font-family: "Inter", sans-serif; display: flex; }
+aside {
+  width: 220px; height: 340px; background: #08101F;
+  border-right: 1px solid rgba(59,130,246,0.1);
+  display: flex; flex-direction: column;
+}
+.logo-area { padding: 20px 22px 16px; }
+.logo-row { display: flex; align-items: baseline; gap: 3px; }
+.logo-white { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+.logo-blue { font-size: 18px; font-weight: 700; color: #3B82F6; letter-spacing: -0.02em; }
+.logo-sub { font-size: 11px; color: #64748B; margin-top: 1px; }
+nav { flex: 1; padding: 0 10px; display: flex; flex-direction: column; gap: 2px; }
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 8px; font-size: 13px;
+  cursor: pointer; transition: all 0.15s; position: relative;
+}
+.nav-item.active { background: rgba(59,130,246,0.1); color: #fff; font-weight: 500; }
+.nav-item.inactive { color: #94A3B8; }
+.nav-item.inactive:hover { color: #fff; background: rgba(255,255,255,0.03); }
+.active-bar { position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px; border-radius: 0 2px 2px 0; background: #3B82F6; }
+.icon { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.footer { padding: 12px 14px; border-top: 1px solid rgba(59,130,246,0.08); }
+.footer-row { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #94A3B8; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #10B981; box-shadow: 0 0 6px rgba(16,185,129,0.7); flex-shrink: 0; }
+.footer-ver { font-size: 9px; color: #475569; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+</style></head><body>
+<aside>
+  <div class="logo-area">
+    <div class="logo-row"><span class="logo-white">Atomix</span><span class="logo-blue">OS</span></div>
+    <div class="logo-sub">Cockpit Manager</div>
+  </div>
+  <nav>
+    <div class="nav-item active">
+      <div class="active-bar"></div>
+      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Scenarios
+    </div>
+    <div class="nav-item inactive">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M2 13.5V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1.5"/><path d="M2 13.5h8M14 13.5h8"/><path d="M10 13.5v-3M14 13.5v-3"/></svg>
+      Theme Builder
+    </div>
+    <div class="nav-item inactive">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      App Library
+    </div>
+    <div class="nav-item inactive">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      Settings
+    </div>
+  </nav>
+  <div class="footer">
+    <div class="footer-row"><div class="status-dot"></div>KDE Plasma 6</div>
+    <div class="footer-ver">v0.2 beta</div>
+  </div>
+</aside>
+</body></html>
