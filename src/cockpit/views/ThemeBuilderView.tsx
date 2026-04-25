@@ -143,7 +143,9 @@ export function ThemeBuilderView({ store }: { store: Store }) {
                   </Button>
                 </div>
               </div>
-              {selected.themeId && <Pill>Linked to scenario</Pill>}
+              {scenarios.some((s) => s.themeId === selected.id) && (
+                <Pill>Linked to scenario</Pill>
+              )}
               <ThemeEditor
                 theme={selected}
                 onChange={(patch) => store.updateTheme(selected.id, patch)}
