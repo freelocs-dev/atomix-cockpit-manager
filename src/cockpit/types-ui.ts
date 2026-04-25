@@ -1,0 +1,1 @@
+export type CockpitView = "scenarios" | "themes" | "library" | "settings";
