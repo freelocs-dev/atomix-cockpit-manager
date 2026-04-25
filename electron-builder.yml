@@ -1,0 +1,25 @@
+appId: dev.freelocs.atomixcockpit
+productName: AtomixOS Cockpit
+copyright: Copyright © 2026 freelocs-dev
+
+directories:
+  output: release
+
+files:
+  - dist/**/*
+  - electron/**/*
+  - package.json
+
+linux:
+  target:
+    - target: AppImage
+      arch: x64
+  icon: electron/icon.png
+  category: Utility
+  synopsis: AtomixOS Desktop Mode Manager
+  description: >
+    Scenario automation manager for KDE Plasma.
+    Configure themes, apps and desktop modes.
+
+appImage:
+  license: LICENSE
