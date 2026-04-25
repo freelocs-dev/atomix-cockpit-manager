@@ -1,12 +1,5 @@
-version: "1"
+diploiVersion: "v1.0"
 components:
   - name: Atomix Cockpit
     identifier: atomix-cockpit
     package: https://github.com/diploi/react-component#main
-    containerCommands:
-      dev: npm run dev
-      start: npm run preview
-    env:
-      static:
-        - name: PORT
-          value: "4173"
