@@ -1,6 +1,0 @@
-diploiVersion: v1.0
-components:
-  - name: React + Vite
-    identifier: react-vite
-    package: https://github.com/diploi/component-react-vite#v19.2.5
-    folder: .
