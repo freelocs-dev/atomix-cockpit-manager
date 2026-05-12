@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "cosmicprisons",
+  "version": "${version}",
+  "name": "CosmicPrisons Core",
+  "description": "A Fabric reimplementation of the CosmicPrisons server gamemode for Minecraft 1.21.11. Features custom mining mechanics, Cosmic Energy, player ranking, custom pickaxe enchantments, ore satchels, and more.",
+  "authors": [
+    "freelocs-dev"
+  ],
+  "contact": {
+    "sources": "https://github.com/freelocs-dev/atomix-cockpit-manager"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.freelocs.cosmicprisons.CosmicPrisonsCore"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.11"
+  },
+  "suggests": {}
+}

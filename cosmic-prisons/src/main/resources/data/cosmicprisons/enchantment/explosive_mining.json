@@ -1,0 +1,20 @@
+{
+  "description": { "translate": "enchantment.cosmicprisons.explosive_mining" },
+  "supported_items": "#minecraft:enchantable/mining",
+  "weight": 5,
+  "max_level": 5,
+  "min_cost": { "base": 15, "per_level_above_first": 15 },
+  "max_cost": { "base": 65, "per_level_above_first": 15 },
+  "anvil_cost": 6,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": { "type": "minecraft:linear", "base": 1.0, "per_level_above_first": 1.0 }
+        }
+      }
+    ]
+  }
+}
