@@ -1,0 +1,39 @@
+{
+  "itemGroup.cosmicprisons.cosmic_prisons": "CosmicPrisons",
+
+  "item.cosmicprisons.cosmic_pickaxe": "Cosmic Pickaxe",
+  "item.cosmicprisons.cosmic_pickaxe.energy": "CE: %s / %s",
+  "item.cosmicprisons.cosmic_pickaxe.no_energy": "No Cosmic Energy stored",
+  "item.cosmicprisons.cosmic_pickaxe.lore1": "Mines ores and collects Cosmic Energy",
+  "item.cosmicprisons.cosmic_pickaxe.lore2": "Use /extract to withdraw stored CE",
+
+  "item.cosmicprisons.ore_satchel": "Ore Satchel",
+  "item.cosmicprisons.ore_satchel.stored": "Stored: %s / %s ores",
+  "item.cosmicprisons.ore_satchel.empty": "Empty – mine ores to fill",
+
+  "item.cosmicprisons.diamond_satchel": "Diamond Satchel",
+
+  "item.cosmicprisons.cosmic_energy_token": "Cosmic Energy Token",
+  "item.cosmicprisons.cosmic_energy_token.value": "Value: %s CE",
+
+  "enchantment.cosmicprisons.explosive_mining": "Explosive Mining",
+  "enchantment.cosmicprisons.token_greed": "Token Greed",
+  "enchantment.cosmicprisons.lucky_strike": "Lucky Strike",
+  "enchantment.cosmicprisons.wormhole": "Wormhole",
+  "enchantment.cosmicprisons.super_breaker": "Super Breaker",
+
+  "command.cosmicprisons.admingive.usage": "Usage: /admingive <item> [player]",
+  "command.cosmicprisons.admingive.success": "Gave %s to %s",
+  "command.cosmicprisons.extract.success": "Extracted %s CE from your pickaxe",
+  "command.cosmicprisons.extract.empty": "Your pickaxe has no Cosmic Energy to extract",
+  "command.cosmicprisons.extract.nopickaxe": "You must hold a Cosmic Pickaxe",
+  "command.cosmicprisons.cosmicenchant.success": "Applied %s %s to %s",
+  "command.cosmicprisons.cosmicenchant.maxlevel": "That enchantment is already at max level",
+  "command.cosmicprisons.cosmicenchant.nopickaxe": "Target must hold a Cosmic Pickaxe",
+  "command.cosmicprisons.cosmicenchant.unknown": "Unknown enchantment: %s",
+
+  "message.cosmicprisons.levelup": "§6§lRANK UP! §eYou are now rank §6%s§e!",
+  "message.cosmicprisons.prestige": "§d§lPRESTIGE! §5You have prestiged to prestige §d%s§5!",
+  "message.cosmicprisons.energy_full": "§c§lPICKAXE FULL! §fUse §e/extract§f to collect your CE",
+  "message.cosmicprisons.satchel_full": "§c§lSATCHEL FULL! §fEmpty your satchel to continue collecting ores"
+}

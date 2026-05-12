@@ -1,0 +1,20 @@
+{
+  "description": { "translate": "enchantment.cosmicprisons.wormhole" },
+  "supported_items": "#minecraft:enchantable/mining",
+  "weight": 3,
+  "max_level": 3,
+  "min_cost": { "base": 20, "per_level_above_first": 20 },
+  "max_cost": { "base": 80, "per_level_above_first": 20 },
+  "anvil_cost": 8,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:block_experience": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": { "type": "minecraft:linear", "base": 1.0, "per_level_above_first": 1.0 }
+        }
+      }
+    ]
+  }
+}
